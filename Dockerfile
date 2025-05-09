@@ -8,7 +8,7 @@ USER root
 # Also grabbing lsb-release to identify the Linux distribution being used and its compliance with the Linux Standard Base.
 RUN apt-get update && apt-get -y install lsb-release
 
-# Verifing stuff...becuase the voices in my head say that I should.
+# Verifing stuff...because the voices in my head say that I should.
 RUN curl -fsSLo /usr/share/keyrings/docker-archive-keyring.asc https://download.docker.com/linux/debian/gpg
 RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.asc] \
     https://download.docker.com/linux/debian $(lsb_release -cs) stable" > /etc/apt/sources.list.d/docker.list
